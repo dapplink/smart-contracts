@@ -8,4 +8,6 @@ contract Properties {
     string  public  description;
     string  public  meta;
 
+    address public  infrastructure;
+
 }
