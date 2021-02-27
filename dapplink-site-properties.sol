@@ -1,7 +1,7 @@
 pragma solidity 5.0;
 
 
-contract Attributes {
+contract Properties {
 
     address public  admin;
     string  public  title;
