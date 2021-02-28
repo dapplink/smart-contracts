@@ -2,10 +2,11 @@ pragma solidity 0.5.0;
 
 
 import "./dapplink-infrastructure-properties.sol";
-
+import "./owned.sol";
 
 contract DapplinkInfrastructureTokenPriceControl  is
-DapplinkInfrastructureProperties
+DapplinkInfrastructureProperties,
+Owned
 {
 
 
