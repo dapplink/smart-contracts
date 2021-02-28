@@ -13,9 +13,9 @@ contract DapplinkInfrastructureWithdrawingControl is
 
     function withdraw
         ()
-        public onlyOwner returns (bool success)
+        public onlyOwner returns ( bool success )
         {
-            owner.send(address(this).balance);
+            owner.send(  address( this ).balance  );
         }
 
 
