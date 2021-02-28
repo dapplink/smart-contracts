@@ -11,10 +11,12 @@ DapplinkSite
 
 
     function deploy
-        ()
+        (
+            address _owner
+        )
         private returns ( DapplinkSite site )
         {
-            return new DapplinkSite( msg.sender )
+            return new DapplinkSite( _owner )
         }
 
 
