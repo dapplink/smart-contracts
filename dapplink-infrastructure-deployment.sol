@@ -12,7 +12,7 @@ DapplinkSite
 
     function deploy
         ()
-        public returns ( DapplinkSite site )
+        private returns ( DapplinkSite site )
         {
             return new DapplinkSite( msg.sender )
         }
