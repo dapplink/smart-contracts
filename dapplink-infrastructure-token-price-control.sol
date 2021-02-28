@@ -16,7 +16,7 @@ Owned
         {
             return price;
         }
-   
+
 
     function setPrice
         (
