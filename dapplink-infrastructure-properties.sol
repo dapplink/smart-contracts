@@ -10,8 +10,8 @@ contract DapplinkInfrastructureProperties {
     uint   public _totalSupply;
     uint   public price;
 
-    mapping(address => uint) balances;
-    mapping(address => mapping(address => uint)) allowed;
+    mapping (  address => uint  ) balances;
+    mapping (  address => mapping ( address => uint )  ) allowed;
 
 
 }
