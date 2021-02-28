@@ -4,7 +4,9 @@ pragma solidity 0.5.0;
 import "./dapplink-infrastructure-properties.sol";
 
 
-contract DapplinkInfrastructureTokenPriceControl {
+contract DapplinkInfrastructureTokenPriceControl  is
+DapplinkInfrastructureProperties
+{
 
 
     function getPrice
