@@ -1,4 +1,7 @@
-pragma solidity 5.0;
+pragma solidity 0.5.0;
+
+
+import "./dapplink-site-properties.sol";
 
 
 contract DapplinkSiteAccessControl is DapplinkSiteProperties {
