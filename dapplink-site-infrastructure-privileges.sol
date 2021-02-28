@@ -4,7 +4,7 @@ pragma solidity 5.0;
 import "./dapplink-site-properties.sol";
 
 
-contract InfrastructurePrivileges is Properies {
+contract DapplinkSiteInfrastructurePrivileges is DapplinkSiteProperies {
 
 
     modifier infrastructure_only()
