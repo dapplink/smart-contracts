@@ -1,7 +1,21 @@
 pragma solidity 0.5.0;
 
 
-contract DapplinkInfrastructure
+import "./dapplink-infrastructure-properties.sol";
+import "./erc20-interface.sol";
+import "./owned.sol";
+import "./safe-math.sol";
+import "./dapplink-infrastructure-token-price-control.sol";
+import "./dapplink-infrastructure-token-balance-control.sol";
+
+
+contract DapplinkInfrastructure is
+    DapplinkInfrastructureTokenPriceControl
+    DapplinkInfrastructureTokenBalanceControl
+    DapplinkInfrastructureProperties
+    ERC20Interface,
+    Owned,
+    SafeMath
 {
 
     
