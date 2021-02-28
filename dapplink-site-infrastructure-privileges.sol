@@ -4,7 +4,7 @@ pragma solidity 0.5.0;
 import "./dapplink-site-properties.sol";
 
 
-contract DapplinkSiteInfrastructurePrivileges is DapplinkSiteProperies {
+contract DapplinkSiteInfrastructurePrivileges is DapplinkSiteProperties {
 
 
     modifier infrastructure_only()
@@ -48,7 +48,7 @@ contract DapplinkSiteInfrastructurePrivileges is DapplinkSiteProperies {
         (
             string memory _new_meta
         )
-        public admin_only
+        public infrastructure_only
         {
             meta = _new_meta;
         }
