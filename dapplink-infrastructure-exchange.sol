@@ -13,7 +13,7 @@ contract DapplinkInfrastructureExchange is
 	{
             uint tokens;
     
-            tokens = msg.value * price;
+            tokens = safeMul( msg.value, price );
             balances[ msg.sender ] = safeAdd(  balances[ msg.sender ], tokens  );
             _totalSupply = safeAdd( _totalSupply, tokens );
     
