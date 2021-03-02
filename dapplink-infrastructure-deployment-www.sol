@@ -2,7 +2,7 @@ pragma solidity 0.5.0;
 
 
 import "./dapplink-site.sol";
-import "./dapplink-infrastructure-deployment-www.sol";
+import "./dapplink-infrastructure-deployment.sol";
 import "./owned.sol";
 import "./safe-math.sol";
 
@@ -10,7 +10,7 @@ import "./safe-math.sol";
 contract DapplinkInfrastructureDeploymentWWW is
     DapplinkSite,
     DapplinkInfrastructureDeployment,
-    Owner,
+    Owned,
     SafeMath
 {
 
@@ -22,14 +22,14 @@ contract DapplinkInfrastructureDeploymentWWW is
 
     event DeployWWW
         (
-	    address contract,
-	    address owner
-	);
+            address _contract,
+            address _owner
+        );
 
 
     function deployWWW
         ()
-        public returns ( address site )
+        public returns ( address siteAddress )
         {
             require
                 (
@@ -39,7 +39,8 @@ contract DapplinkInfrastructureDeploymentWWW is
             Dapplink site = deploy( msg.sender );
             balances[ msg.sender ] = safeSub(  balances[ msg.sender ], deployment_www_fee    );
             balances[ msg.sender ] = safeAdd(  balances[ msg.sender ], deployment_www_bonus  );
-	    emit DeployWWW(  address( site ), msg.sender );
+	    deployedWWWSites.push(  address( site )  );
+            emit DeployWWW(  address( site ), msg.sender );
 	    return address( site );
         }
 
@@ -63,7 +64,10 @@ contract DapplinkInfrastructureDeploymentWWW is
         {
             deployment_www_bonus = _bonus;
             return true;
-        } 
+        }
 
+
+    // getDeployedWWWSites length
+    // getDeployedWWWSites item
 
 }

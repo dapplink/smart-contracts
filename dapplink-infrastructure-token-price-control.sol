@@ -5,8 +5,8 @@ import "./dapplink-infrastructure-properties.sol";
 import "./owned.sol";
 
 contract DapplinkInfrastructureTokenPriceControl  is
-DapplinkInfrastructureProperties,
-Owned
+    DapplinkInfrastructureProperties,
+    Owned
 {
 
 

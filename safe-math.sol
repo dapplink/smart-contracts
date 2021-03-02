@@ -7,10 +7,10 @@ contract SafeMath {
     function safeAdd
         (
             uint a,
-	    uint b
-	)
-	internal pure returns ( uint c )
-	{
+            uint b
+        )
+        internal pure returns ( uint c )
+        {
             c = a + b;
             require( c >= a );
         }
@@ -19,7 +19,7 @@ contract SafeMath {
     function safeSub
         (
             uint a,
-	    uint b
+            uint b
         )
         internal pure returns ( uint c )
         {
@@ -53,3 +53,4 @@ contract SafeMath {
 
 
 }
+	

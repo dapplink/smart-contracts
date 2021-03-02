@@ -10,9 +10,9 @@ contract Owned {
 
     event OwnershipTransferred
         (
-	    address indexed _from,
-	    address indexed _to
-	);
+            address indexed _from,
+            address indexed _to
+        );
 
 
     constructor
@@ -21,7 +21,7 @@ contract Owned {
         {
             owner = msg.sender;
         }
-	
+        
 
     modifier onlyOwner
         {
@@ -32,10 +32,10 @@ contract Owned {
 
     function transferOwnership
         (
-	    address payable _newOwner
-	)
-	public onlyOwner
-	{
+            address payable _newOwner
+        )
+        public onlyOwner
+        {
             newOwner = _newOwner;
         }
 
