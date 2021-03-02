@@ -732,6 +732,7 @@ contract DapplinkInfrastructure is
         }
 	
 
+/*
     function deployNFT
         (
             string  memory _token_name,
@@ -756,6 +757,7 @@ contract DapplinkInfrastructure is
                     );
             return address( site );
         }
+*/
 
 
     function notaryChangeTitle
