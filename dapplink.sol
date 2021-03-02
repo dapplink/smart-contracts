@@ -1052,7 +1052,7 @@ contract DapplinkInfrastructure is
                         address( site ),
                         msg.sender
                     );
-	        return address( site );
+            return address( site );
         }
 
 
@@ -1098,10 +1098,10 @@ contract DapplinkInfrastructure is
         
     function requestForListingNFT
         (
-        	address _site
-	)
-	public
-	{
+            address _site
+        )
+        public
+        {
             DapplinkSite site;
             site = DapplinkNFTSite( _site );
             require( msg.sender == site.admin() );
@@ -1117,9 +1117,9 @@ contract DapplinkInfrastructure is
     function requestForDelistingNFT
         (
             address _site
-	)
-	public
-	{
+        )
+        public
+        {
             DapplinkNFTSite site;
             site = DapplinkNFTSite( _site );
             listingNFT[ _site ] = false;
@@ -1151,8 +1151,8 @@ contract DapplinkInfrastructure is
         (
             address _site
         )
-	public returns ( bool )
-	{
+        public returns ( bool )
+        {
             return listingNFT[ _site ];
         }
     
@@ -1210,7 +1210,7 @@ contract DapplinkInfrastructure is
     function notaryChangeAdmin
         (
             address _site,
-        address _new_admin
+            address _new_admin
         )
         public
         {
