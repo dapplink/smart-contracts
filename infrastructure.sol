@@ -952,7 +952,7 @@ contract DapplinkNFTSite is Ownable, MinterRole, ERC721Full,
 
     constructor         
         (
-            address _admin,
+            address        _admin,
             string  memory _token_name,
             string  memory _token_symbol
         ) 
@@ -968,9 +968,9 @@ contract DapplinkNFTSite is Ownable, MinterRole, ERC721Full,
             address       _to,
             string memory _tokenURI
         )
-        public onlyMinter returns (bool)
+        public onlyMinter returns ( bool )
         {
-            _mintWithTokenURI(_to, _tokenURI);
+            _mintWithTokenURI( _to, _tokenURI );
             return true;
         }
 
@@ -982,7 +982,7 @@ contract DapplinkNFTSite is Ownable, MinterRole, ERC721Full,
         )
         internal
         {
-            uint _tokenId = totalSupply().add(1);
+            uint _tokenId = totalSupply().add( 1 );
             _mint( _to, _tokenId );
             _setTokenURI( _tokenId, _tokenURI );
         }
