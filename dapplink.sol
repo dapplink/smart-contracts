@@ -744,7 +744,7 @@ contract DapplinkInfrastructure is
                     balances[ msg.sender ] >= deployment_nft_fee,
                     "no enough tokens for deployment"
                 );
-            DapplinkNFTSite site = new DapplinkNFTSite( _msg.sender, _token_name, _token_symbol );
+            DapplinkNFTSite site = new DapplinkNFTSite( msg.sender, _token_name, _token_symbol );
             balances[ msg.sender ] = safeSub(  balances[ msg.sender ], deployment_nft_fee    );
             balances[ msg.sender ] = safeAdd(  balances[ msg.sender ], deployment_nft_bonus  );
             NFTSites.push(  address( site )  );
