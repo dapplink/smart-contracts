@@ -42,7 +42,7 @@ contract DapplinkSiteFilesystem is
 
     struct filesystem
         {
-            address file_sha;	
+            address file_sha;   
             string  file_mime;
             uint    n_chunks;
         }
@@ -71,7 +71,7 @@ contract DapplinkSiteFilesystem is
                 file_sha, 
                 chunk_index,
                 chunk_data
-                );
+            );
         }
 
 
@@ -80,7 +80,7 @@ contract DapplinkSiteFilesystem is
             address         pathname_sha,
             address         file_sha,
             string   memory file_mime,
-	        uint            n_chunks
+            uint            n_chunks
         ) 
         public admin_only
         {
@@ -325,8 +325,8 @@ contract Owned {
 
     function acceptOwnership
         ()
-	public
-	{
+        public
+        {
             require ( msg.sender == newOwner );
             emit OwnershipTransferred ( owner, newOwner );
             owner = newOwner;
@@ -647,7 +647,7 @@ contract DapplinkInfrastructure is
                             address( site ),
                             msg.sender
                     );
-	        return address( site );
+                return address( site );
         }
 
 
@@ -693,10 +693,10 @@ contract DapplinkInfrastructure is
         
     function requestForListingWWW
         (
-        	address _site
-	)
-	public
-	{
+                address _site
+        )
+        public
+        {
             DapplinkSite site;
             site = DapplinkSite( _site );
             require( msg.sender == site.admin() );
@@ -712,9 +712,9 @@ contract DapplinkInfrastructure is
     function requestForDelistingWWW
         (
             address _site
-	)
-	public
-	{
+        )
+        public
+        {
             DapplinkSite site;
             site = DapplinkSite( _site );
             listingWWW[ _site ] = false;
@@ -746,8 +746,8 @@ contract DapplinkInfrastructure is
         (
             address _site
         )
-	public returns ( bool )
-	{
+        public returns ( bool )
+        {
             return listingWWW[ _site ];
         }
     
@@ -781,7 +781,7 @@ contract DapplinkInfrastructure is
                             address( site ),
                             msg.sender
                     );
-	        return address( site );
+                return address( site );
         }
 
 
@@ -827,10 +827,10 @@ contract DapplinkInfrastructure is
         
     function requestForListingAPK
         (
-        	address _site
-	)
-	public
-	{
+                address _site
+        )
+        public
+        {
             DapplinkSite site;
             site = DapplinkSite( _site );
             require( msg.sender == site.admin() );
@@ -846,9 +846,9 @@ contract DapplinkInfrastructure is
     function requestForDelistingAPK
         (
             address _site
-	)
-	public
-	{
+        )
+        public
+        {
             DapplinkSite site;
             site = DapplinkSite( _site );
             listingAPK[ _site ] = false;
@@ -880,8 +880,8 @@ contract DapplinkInfrastructure is
         (
             address _site
         )
-	public returns ( bool )
-	{
+        public returns ( bool )
+        {
             return listingAPK[ _site ];
         }
     
@@ -915,7 +915,7 @@ contract DapplinkInfrastructure is
                             address( site ),
                             msg.sender
                     );
-	        return address( site );
+                return address( site );
         }
 
 
@@ -961,10 +961,10 @@ contract DapplinkInfrastructure is
         
     function requestForListingDPWA
         (
-        	address _site
-	)
-	public
-	{
+                address _site
+        )
+        public
+        {
             DapplinkSite site;
             site = DapplinkSite( _site );
             require( msg.sender == site.admin() );
@@ -980,9 +980,9 @@ contract DapplinkInfrastructure is
     function requestForDelistingDPWA
         (
             address _site
-	)
-	public
-	{
+        )
+        public
+        {
             DapplinkSite site;
             site = DapplinkSite( _site );
             listingDPWA[ _site ] = false;
@@ -1014,8 +1014,8 @@ contract DapplinkInfrastructure is
         (
             address _site
         )
-	public returns ( bool )
-	{
+        public returns ( bool )
+        {
             return listingDPWA[ _site ];
         }
     
